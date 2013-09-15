@@ -74,6 +74,17 @@ public class Werkzeugkasten {
 		return sum;	
 	}
 	
+	
+	public void drawArray(int[] array) {
+
+		String field = "";
+		for (int number : array) {
+			field += "[" + number + "]-";
+
+		}
+		System.out.println(field);
+	}
+	
 	/***
 	 * 
 	 * @param character
