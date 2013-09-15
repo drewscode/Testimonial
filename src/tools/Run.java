@@ -19,11 +19,12 @@ public class Run {
 		do{
 			w.getNextLetter(Einlesen.LiesChar());
 			
+			
 			String string1 = w.liesString();
 			
 			String string2 = w.liesString();
 			
-			w.stringCompare(string1, string2);
+			w.stringCompare(w.liesString(), w.liesString());
 			
 			
 		}while(w.weiter());

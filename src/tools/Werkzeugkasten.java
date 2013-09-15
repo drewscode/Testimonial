@@ -27,6 +27,58 @@ public class Werkzeugkasten {
 		
 	}
 
+	
+	/***
+	 * 
+	 * @param sum
+	 * 		wert aus dem stunden/minuten/sekunden berechnet werden soll
+	 */
+	public static void calculateTime(int sum){
+		
+		if(sum < 60){
+			
+			System.out.println(sum + " Sekunden");
+		} else if(sum >= 60 && sum < 3600){
+			
+			int minuten = sum / 60;
+			int sekunden = sum % 60;
+			System.out.println(minuten + " Minuten " + sekunden + " Sekunden");
+		} else if(sum >= 3600){
+			
+			int stunden = sum / 3600;
+			System.out.println(stunden);
+			int minuten = (sum - (stunden * 3600)) / 60;
+			System.out.println(minuten);
+			int sekunden = (sum - (stunden * 3600) - (minuten * 60));
+			System.out.println(sekunden);
+			
+			System.out.println(stunden + " Stunden " + minuten + " Minuten " + sekunden + " Sekunden");
+		}
+	}
+	
+	
+	/***
+	 * 
+	 * @param myArray
+	 * 		
+	 * @return
+	 */
+	public static int arraySum(int[] myArray){
+		
+		int sum = 0;
+		
+		for (int i = 0; i < myArray.length; i++) {
+			sum = sum + myArray[i];
+		}
+		
+		return sum;	
+	}
+	
+	/***
+	 * 
+	 * @param character
+	 * 		zu Ÿbergebender character
+	 */
 	public void printChar(char character){
 		
 		System.out.println("Dein Character ist" + character);
